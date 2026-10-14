@@ -1,0 +1,60 @@
+import { MediaItem } from '../types';
+
+export const GALLERY_ITEMS: MediaItem[] = [
+  {
+    id: 'gallery-reference-hospital-inspection',
+    title: 'Reference Hospital Okene — Clinical Facilities Inspection',
+    category: 'Healthcare',
+    date: 'December 2022',
+    location: 'Okene, Kogi Central',
+    caption: 'Official inspection and public commissioning of the 300-bed Reference Hospital in Okene equipped with high-slice MRI and surgical suites.',
+    type: 'image',
+  },
+  {
+    id: 'gallery-ganaja-flyover-commissioning',
+    title: 'Ganaja Grade-Separated Flyover Interchange',
+    category: 'Infrastructure',
+    date: 'December 2022',
+    location: 'Ganaja Junction, Lokoja',
+    caption: 'The landmark grade-separated overpass delivered to eliminate gridlocks along the Abuja-Southern Nigeria commercial transit axis.',
+    type: 'image',
+  },
+  {
+    id: 'gallery-custech-osara-academic-quad',
+    title: 'CUSTECH Osara — Engineering & Technology Campus',
+    category: 'Public Service',
+    date: 'March 2023',
+    location: 'Osara, Adavi LGA',
+    caption: 'State-of-the-art lecture theatres, computing laboratories, and campus administrative complexes established to promote STEM education.',
+    type: 'image',
+  },
+  {
+    id: 'gallery-community-traditional-rulers-forum',
+    title: 'Consultative Assembly with Traditional Council of Chiefs',
+    category: 'Community Engagement',
+    date: 'August 2023',
+    location: 'Ebira Traditional Council Chambers, Okene',
+    caption: 'High-level consultative dialogue with paramount royal fathers and community elders on peace building and youth security cooperation.',
+    type: 'image',
+  },
+  {
+    id: 'gallery-valedictory-state-address',
+    title: 'Valedictory State of the State Address & Transition',
+    category: 'Speeches',
+    date: 'January 2024',
+    location: 'Lord Lugard House, Lokoja',
+    caption: 'Presenting the comprehensive 8-year governance stewardship account prior to the historic democratic transition to Governor Usman Ododo.',
+    type: 'video',
+    duration: '24 min speech',
+    youtubeId: 'dQw4w9WgXcQ', // Placeholder video identifier
+  },
+  {
+    id: 'gallery-women-vice-chairpersons-summit',
+    title: 'Historic Summit of 21 Local Government Vice Chairpersons',
+    category: 'Public Service',
+    date: 'November 2021',
+    location: 'Lokoja, Kogi State',
+    caption: 'Convening the 21 newly inaugurated female LGA Vice Chairpersons to inaugurate grassroots human capital and primary healthcare interventions.',
+    type: 'image',
+  },
+];
