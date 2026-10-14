@@ -50,6 +50,22 @@ export interface AgendaPolicy {
   lastUpdated: string;
 }
 
+export type EditorialStatus =
+  | 'discovered'
+  | 'draft_generated'
+  | 'pending_review'
+  | 'approved'
+  | 'published'
+  | 'rejected'
+  | 'archived';
+
+export type ContentNature =
+  | 'verified_fact'
+  | 'allegation_legal'
+  | 'campaign_statement'
+  | 'opinion_analysis'
+  | 'unverified_claim';
+
 export interface NewsArticle {
   id: string;
   slug: string;
@@ -62,6 +78,72 @@ export interface NewsArticle {
   sourcePublisher?: string;
   sourceUrl?: string;
   isFeatured?: boolean;
+
+  // Editorial & Verification Pipeline fields
+  editorialStatus?: EditorialStatus;
+  contentNature?: ContentNature;
+  discoveredAt?: string;
+  reviewedAt?: string;
+  reviewedBy?: string;
+  verificationNotes?: string;
+  confidenceScore?: number; // 0 to 100
+  originalSourceSnippet?: string;
+  isAutoPublished?: boolean;
+}
+
+export interface AuditLogEntry {
+  id: string;
+  timestamp: string;
+  actor: string;
+  action: 'DISCOVERED' | 'DRAFT_CREATED' | 'APPROVED' | 'PUBLISHED' | 'REJECTED' | 'ARCHIVED' | 'EDITED' | 'SETTINGS_CHANGED' | 'SYSTEM_SCAN';
+  targetArticleId?: string;
+  targetArticleTitle?: string;
+  details: string;
+}
+
+export interface SystemHealthStatus {
+  searchProvider: {
+    status: 'operational' | 'degraded' | 'offline';
+    providerName: string;
+    lastQueryTime?: string;
+    details?: string;
+  };
+  aiSummarizer: {
+    status: 'operational' | 'degraded' | 'offline';
+    modelName: string;
+    lastProcessedTime?: string;
+    apiKeyConfigured: boolean;
+  };
+  database: {
+    status: 'operational' | 'degraded';
+    recordCount: number;
+    lastSavedTime?: string;
+  };
+  scheduler: {
+    status: 'active' | 'idle' | 'stopped';
+    intervalHours: number;
+    lastRunTime?: string;
+    nextRunTime?: string;
+    autoPublishEnabled: boolean;
+    consecutiveFailures: number;
+  };
+  queueCounts: {
+    discovered: number;
+    pendingReview: number;
+    approved: number;
+    published: number;
+    rejected: number;
+    archived: number;
+    total: number;
+  };
+}
+
+export interface SystemSettings {
+  autoPublishTrusted: boolean;
+  trustedPublishers: string[];
+  scanIntervalHours: number;
+  emergencyDisableAutoPublish: boolean;
+  allowLegalAutoPublish: boolean;
 }
 
 export interface MediaItem {
