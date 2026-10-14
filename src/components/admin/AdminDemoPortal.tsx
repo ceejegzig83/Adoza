@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { X, Shield, Users, MessageSquare, Mail, RefreshCw, Trash2, CheckCircle2, AlertTriangle, Eye } from 'lucide-react';
 import { VolunteerSubmission, CommunityRequestSubmission, ContactSubmission } from '../../types';
+import { GYB_PORTRAIT_URL } from '../../assets/portrait';
 
 interface AdminDemoPortalProps {
   isOpen: boolean;
@@ -63,7 +64,7 @@ export const AdminDemoPortal: React.FC<AdminDemoPortalProps> = ({ isOpen, onClos
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl overflow-hidden border-2 border-[#D4AF37] shadow-xs bg-slate-900 shrink-0">
               <img
-                src="/images/adoza-bello.jpg"
+                src={GYB_PORTRAIT_URL}
                 alt="Alhaji Yahaya Adoza Bello"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"

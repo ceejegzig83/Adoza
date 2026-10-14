@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, ArrowRight, Shield, Award, BookOpen, Newspaper, PhoneCall, HeartHandshake } from 'lucide-react';
 import { MAIN_NAV_ITEMS } from '../../data/navigation';
+import { GYB_PORTRAIT_URL } from '../../assets/portrait';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -47,7 +48,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-full overflow-hidden border-2 border-[#D4AF37] shadow-xs bg-slate-900 shrink-0">
               <img
-                src="/images/adoza-bello.jpg"
+                src={GYB_PORTRAIT_URL}
                 alt="Alhaji Yahaya Adoza Bello"
                 className="w-full h-full object-cover object-top"
                 loading="lazy"

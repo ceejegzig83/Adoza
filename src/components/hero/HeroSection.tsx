@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, ChevronRight, Award, Compass, Shield, Users } from 'lucide-react';
+import { GYB_PORTRAIT_URL } from '../../assets/portrait';
 
 interface HeroSectionProps {
   onOpenVolunteerModal: () => void;
@@ -122,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenVolunteerModal }
                       <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full p-1.5 bg-gradient-to-tr from-[#D4AF37] via-[#FDF8E7] to-[#D4AF37] shadow-2xl">
                         <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 border-2 border-emerald-900 relative">
                           <img
-                            src="/images/adoza-bello.jpg"
+                            src={GYB_PORTRAIT_URL}
                             alt="Alhaji Yahaya Adoza Bello — Former Executive Governor of Kogi State"
                             className="w-full h-full object-cover object-top"
                             loading="eager"

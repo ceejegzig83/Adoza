@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Award, BookOpen, CheckCircle, ExternalLink, ShieldCheck } from 'lucide-react';
+import { GYB_PORTRAIT_URL } from '../../assets/portrait';
 
 interface TimelineEvent {
   year: string;
@@ -70,7 +71,7 @@ export const BiographySection: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-5 rounded-2xl bg-[#F8F7F2] border border-slate-200 shadow-2xs">
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border-2 border-[#D4AF37] shadow-sm bg-slate-900">
                 <img
-                  src="/images/adoza-bello.jpg"
+                  src={GYB_PORTRAIT_URL}
                   alt="Alhaji Yahaya Adoza Bello"
                   className="w-full h-full object-cover object-top"
                   loading="lazy"

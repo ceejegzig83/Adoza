@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SOCIAL_CONFIG, CURATED_SOCIAL_POSTS, FacebookFeedMode } from '../../data/social';
 import { ExternalLink, Play, ThumbsUp, MessageSquare, Share2, Shield, Video, Layers } from 'lucide-react';
+import { GYB_PORTRAIT_URL } from '../../assets/portrait';
 
 export const FacebookFeed: React.FC = () => {
   const [feedMode, setFeedMode] = useState<FacebookFeedMode>(SOCIAL_CONFIG.defaultMode);
@@ -77,7 +78,7 @@ export const FacebookFeed: React.FC = () => {
                 <div className="relative">
                   <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-[#1877F2] shadow-xs bg-slate-900">
                     <img
-                      src="/images/adoza-bello.jpg"
+                      src={GYB_PORTRAIT_URL}
                       alt="Alhaji Yahaya Adoza Bello"
                       className="w-full h-full object-cover object-top"
                       loading="lazy"
@@ -123,7 +124,7 @@ export const FacebookFeed: React.FC = () => {
                       <div className="flex items-center gap-2.5">
                         <div className="w-8 h-8 rounded-full overflow-hidden border border-slate-300 bg-slate-800 shrink-0">
                           <img
-                            src="/images/adoza-bello.jpg"
+                            src={GYB_PORTRAIT_URL}
                             alt={post.author}
                             className="w-full h-full object-cover object-top"
                             loading="lazy"
