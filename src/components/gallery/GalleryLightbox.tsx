@@ -45,25 +45,31 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({ item, onClose 
         className="relative bg-[#102A43] text-white rounded-3xl max-w-3xl w-full shadow-2xl border border-slate-700 z-10 overflow-hidden flex flex-col focus:outline-hidden animate-in fade-in zoom-in-95 duration-200"
       >
         {/* Media Canvas View */}
-        <div className="relative aspect-video bg-gradient-to-br from-[#064E3B] via-[#04281E] to-[#102A43] flex items-center justify-center p-8 text-center border-b border-slate-800">
+        <div className="relative aspect-video bg-gradient-to-br from-[#064E3B] via-[#04281E] to-[#102A43] flex items-center justify-center text-center border-b border-slate-800 overflow-hidden">
           <button
             type="button"
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition-colors z-20 cursor-pointer"
+            className="absolute top-4 right-4 p-2 rounded-full bg-black/60 text-white hover:bg-black/90 transition-colors z-20 cursor-pointer shadow-md"
             aria-label="Close lightbox"
           >
             <X className="w-5 h-5" />
           </button>
 
-          {item.type === 'video' ? (
-            <div className="flex flex-col items-center">
+          {item.imageUrl ? (
+            <img
+              src={item.imageUrl}
+              alt={item.title}
+              className="w-full h-full object-cover"
+            />
+          ) : item.type === 'video' ? (
+            <div className="flex flex-col items-center p-8">
               <div className="w-16 h-16 rounded-full bg-[#008751] text-white flex items-center justify-center shadow-lg mb-3">
                 <Play className="w-8 h-8 ml-1" />
               </div>
               <p className="text-sm font-semibold">{item.duration || 'Archived Broadcast'}</p>
             </div>
           ) : (
-            <div className="flex flex-col items-center max-w-md">
+            <div className="flex flex-col items-center max-w-md p-8">
               <div className="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white mb-4">
                 <span className="font-extrabold font-heading text-xl text-[#D4AF37]">GYB</span>
               </div>

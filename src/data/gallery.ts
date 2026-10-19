@@ -9,6 +9,7 @@ export const GALLERY_ITEMS: MediaItem[] = [
     location: 'Okene, Kogi Central',
     caption: 'Official inspection and public commissioning of the 300-bed Reference Hospital in Okene equipped with high-slice MRI and surgical suites.',
     type: 'image',
+    imageUrl: '/images/reference-hospital-okene.jpg',
   },
   {
     id: 'gallery-ganaja-flyover-commissioning',
@@ -18,6 +19,7 @@ export const GALLERY_ITEMS: MediaItem[] = [
     location: 'Ganaja Junction, Lokoja',
     caption: 'The landmark grade-separated overpass delivered to eliminate gridlocks along the Abuja-Southern Nigeria commercial transit axis.',
     type: 'image',
+    imageUrl: '/images/ganaja-flyover.jpg',
   },
   {
     id: 'gallery-custech-osara-academic-quad',
@@ -27,6 +29,7 @@ export const GALLERY_ITEMS: MediaItem[] = [
     location: 'Osara, Adavi LGA',
     caption: 'State-of-the-art lecture theatres, computing laboratories, and campus administrative complexes established to promote STEM education.',
     type: 'image',
+    imageUrl: '/images/custech-osara.jpg',
   },
   {
     id: 'gallery-community-traditional-rulers-forum',

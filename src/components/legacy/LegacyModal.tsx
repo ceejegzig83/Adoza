@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { X, CheckCircle2, MapPin, Calendar, ExternalLink, ShieldCheck, Share2 } from 'lucide-react';
+import { X, CheckCircle2, MapPin, Calendar, ExternalLink, ShieldCheck, Share2, Camera } from 'lucide-react';
 import { LegacyProject } from '../../types';
+import { LEGACY_IMAGE_ASSETS } from '../../assets/legacyImages';
 
 interface LegacyModalProps {
   project: LegacyProject | null;
@@ -30,6 +31,8 @@ export const LegacyModal: React.FC<LegacyModalProps> = ({ project, onClose }) =>
   }, [project, onClose]);
 
   if (!project) return null;
+
+  const imageSrc = LEGACY_IMAGE_ASSETS[project.id] || project.imageUrl;
 
   const handleShare = () => {
     if (navigator.share) {
@@ -106,6 +109,27 @@ export const LegacyModal: React.FC<LegacyModalProps> = ({ project, onClose }) =>
             </span>
           </div>
         </div>
+
+        {/* Project Photo Banner (if available) */}
+        {imageSrc && (
+          <div className="relative w-full h-56 sm:h-64 bg-slate-900 overflow-hidden border-b border-slate-200 shrink-0">
+            <img
+              src={imageSrc}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
+              <span className="flex items-center gap-1.5 font-medium bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-md border border-white/20">
+                <Camera className="w-3.5 h-3.5 text-[#D4AF37]" />
+                Official Project Site Photo
+              </span>
+              <span className="text-slate-200 bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-md border border-white/20">
+                {project.location}
+              </span>
+            </div>
+          </div>
+        )}
 
         {/* Modal Scrollable Body */}
         <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-sm text-[#202B33] leading-relaxed">

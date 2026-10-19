@@ -71,17 +71,29 @@ export const MediaGallery: React.FC = () => {
             >
               {/* Media Preview Box */}
               <div className="relative aspect-4/3 bg-gradient-to-br from-[#064E3B] to-[#102A43] p-6 flex flex-col justify-between text-white overflow-hidden">
-                {/* Architectural pattern background */}
-                <div className="absolute inset-0 opacity-15 pointer-events-none">
-                  <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <defs>
-                      <pattern id={`gallery-pattern-${item.id}`} width="20" height="20" patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="10" height="10" fill="#D4AF37" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill={`url(#gallery-pattern-${item.id})`} />
-                  </svg>
-                </div>
+                {item.imageUrl ? (
+                  <>
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/30" />
+                  </>
+                ) : (
+                  /* Architectural pattern background */
+                  <div className="absolute inset-0 opacity-15 pointer-events-none">
+                    <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <defs>
+                        <pattern id={`gallery-pattern-${item.id}`} width="20" height="20" patternUnits="userSpaceOnUse">
+                          <rect x="0" y="0" width="10" height="10" fill="#D4AF37" />
+                        </pattern>
+                      </defs>
+                      <rect width="100%" height="100%" fill={`url(#gallery-pattern-${item.id})`} />
+                    </svg>
+                  </div>
+                )}
 
                 <div className="relative z-10 flex items-center justify-between text-xs text-emerald-200">
                   <span className="font-bold text-[#D4AF37] uppercase tracking-wider font-heading">

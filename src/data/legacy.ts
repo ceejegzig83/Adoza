@@ -3,15 +3,16 @@ import { LegacyProject } from '../types';
 export const LEGACY_PROJECTS: LegacyProject[] = [
   {
     id: 'healthcare-okene-reference-hospital',
-    title: 'Reference Hospital Okene & Healthcare Infrastructure',
+    title: 'CUSTECH Teaching Hospital',
     category: 'healthcare',
     categoryLabel: 'Healthcare Infrastructure',
-    summary: 'Construction and commissioning of the state-of-the-art Reference Hospital in Okene alongside regional specialist hospitals in Gegu-Beki and Lokoja.',
-    description: 'During his tenure as Governor, Yahaya Adoza Bello prioritized tertiary and secondary healthcare delivery across Kogi State. The flagship Reference Hospital in Okene was conceived and constructed to serve as a world-class diagnostic, surgical, and therapeutic medical hub for Kogi Central, surrounding states, and the North Central geopolitical zone. Equipped with advanced radiological facilities including high-slice CT scanners, modern MRI suites, oxygen production plants, and intensive care units, this facility significantly reduced interstate medical referral burdens.',
+    summary: 'Construction and commissioning of the state-of-the-art Reference Hospital in Okene (now CUSTECH Teaching Hospital) alongside regional specialist hospitals in Gegu-Beki and Lokoja.',
+    description: 'During his tenure as Governor, Yahaya Adoza Bello prioritized tertiary and secondary healthcare delivery across Kogi State. The flagship Reference Hospital in Okene (subsequently designated as CUSTECH Teaching Hospital) was conceived and constructed to serve as a world-class diagnostic, surgical, and therapeutic medical hub for Kogi Central, surrounding states, and the North Central geopolitical zone. Equipped with advanced radiological facilities including high-slice CT scanners, modern MRI suites, oxygen production plants, and intensive care units, this facility significantly reduced interstate medical referral burdens.',
     location: 'Okene, Kogi Central (with counterpart facilities in Gegu & Lokoja)',
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Commissioned December 2022 by President Muhammadu Buhari',
     status: 'Commissioned & Operational',
+    imageUrl: '/images/reference-hospital-okene.jpg',
     highlightMetric: {
       value: '300+ Beds',
       label: 'Ultra-modern Diagnostic & Surgical Capacity',
@@ -39,6 +40,7 @@ export const LEGACY_PROJECTS: LegacyProject[] = [
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Commissioned December 2022',
     status: 'Completed & Opened for Public Traffic',
+    imageUrl: '/images/ganaja-flyover.jpg',
     highlightMetric: {
       value: '1st Flyover',
       label: 'Modern Grade-Separated Interchange in Kogi State',
@@ -66,6 +68,7 @@ export const LEGACY_PROJECTS: LegacyProject[] = [
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Continuous phased deployment (2016–2024)',
     status: 'Institutionalized Framework',
+    imageUrl: '/images/security-total-freedom.jpg',
     highlightMetric: {
       value: '200+ Vehicles',
       label: 'Procured & Deployed for Joint Security Outposts',
@@ -93,8 +96,9 @@ export const LEGACY_PROJECTS: LegacyProject[] = [
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Chartered 2020 / Operational with multiple faculties',
     status: 'Operational Academic Institution',
+    imageUrl: '/images/custech-osara.jpg',
     highlightMetric: {
-      value: '30+ Courses',
+      value: '300+ Courses',
       label: 'Accredited STEM Degrees by National Universities Commission',
     },
     keyFeatures: [
@@ -120,6 +124,7 @@ export const LEGACY_PROJECTS: LegacyProject[] = [
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Institutionalized 2020 Local Council Elections',
     status: 'Policy Implemented & Benchmark Recognized',
+    imageUrl: '/images/gender-inclusion-representation.jpg',
     highlightMetric: {
       value: '100% of LGAs',
       label: 'Elected Women as Executive Vice Chairpersons',
@@ -147,6 +152,7 @@ export const LEGACY_PROJECTS: LegacyProject[] = [
     tenurePeriod: '2016–2024 Administration',
     completionDate: 'Multi-year phased reform (2016–2023)',
     status: 'Verified Institutional Reform',
+    imageUrl: '/images/fiscal-modernization-sftas.jpg',
     highlightMetric: {
       value: 'Top Tier',
       label: 'World Bank SFTAS Fiscal Transparency Rating',

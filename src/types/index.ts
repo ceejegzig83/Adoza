@@ -11,6 +11,7 @@ export interface LegacyProject {
   tenurePeriod: string;
   completionDate?: string;
   status: string;
+  imageUrl?: string;
   highlightMetric?: {
     value: string;
     label: string;
@@ -154,6 +155,7 @@ export interface MediaItem {
   location: string;
   caption: string;
   type: 'image' | 'video';
+  imageUrl?: string;
   duration?: string;
   youtubeId?: string;
 }

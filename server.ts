@@ -14,6 +14,9 @@ const PORT = parseInt(process.env.PORT || '3000', 10);
 
 app.use(express.json());
 
+// Serve public static assets (images, documents, icons)
+app.use(express.static(path.resolve(__dirname, 'public')));
+
 // Mount API Endpoints
 app.use('/api', apiRouter);
 
